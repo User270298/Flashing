@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Привет, мир!</h1>
+    <div class="fl">
+        <span class="my 1"></span>
+        <br>
+        <br>
+        <span class="my 2"></span>
+        <br>
+        <br>
+        <span class="my 3"></span>
+        <br>
+        <br>
+        <span class="my 4"></span>
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+
+        let task = $('.my')
+        let arr = ['Убрать в квартире', 'Выгулить собаку', 'Приготовить еду', 'Пойти на тренировку']
+        for (let i = 0; i < arr.length; i++) {
+            task[i].append(arr[i])
+            task.hide().fadeIn('slow')
+        }
+        task.delay(6000)
+        for (let i = 0; i < arr.length; i++) {
+            task[i].append(' Выполнено!✅')
+            
+        }
+        $('h1').delay(10000).text('Мои задачи')
+
+    </script>
+</body>
+
+</html>
